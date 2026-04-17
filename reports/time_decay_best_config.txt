@@ -1,0 +1,9 @@
+decay_rate: 0.01
+short_term_days: 30.0
+short_term_weight: 0.2
+spend_weight: 0.6
+freq_weight: 0.4
+precision_at_k: 0.09225
+recall_at_k: 0.46125
+map_at_k: 0.23875
+ndcg_at_k: 0.2935671720939536

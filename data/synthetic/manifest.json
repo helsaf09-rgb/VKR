@@ -1,0 +1,281 @@
+{
+  "generation": {
+    "n_users": 800,
+    "avg_transactions": 140,
+    "months": 12,
+    "seed": 42
+  },
+  "interaction_simulation": {
+    "seed": 43,
+    "min_impressions": 6,
+    "max_impressions": 10,
+    "lookback_days": 120,
+    "score_noise_std": 0.08,
+    "logistic_slope": 7.5,
+    "logistic_center": 0.3
+  },
+  "artifacts": {
+    "users_file": "users.csv",
+    "transactions_file": "transactions.csv",
+    "offers_file": "offers.csv",
+    "interactions_file": "interactions.csv",
+    "holdout_file": "test_positive_ground_truth.csv"
+  },
+  "segments": {
+    "probabilities": {
+      "daily_life": 0.26,
+      "traveler": 0.14,
+      "family": 0.2,
+      "digital_pro": 0.14,
+      "investor": 0.11,
+      "student": 0.15
+    },
+    "boosted_categories": {
+      "daily_life": [
+        "groceries",
+        "restaurants",
+        "transport",
+        "utilities"
+      ],
+      "traveler": [
+        "travel",
+        "transport",
+        "restaurants",
+        "entertainment"
+      ],
+      "family": [
+        "groceries",
+        "home",
+        "healthcare",
+        "education",
+        "insurance"
+      ],
+      "digital_pro": [
+        "electronics",
+        "money_transfer",
+        "entertainment",
+        "investments"
+      ],
+      "investor": [
+        "investments",
+        "insurance",
+        "money_transfer",
+        "education"
+      ],
+      "student": [
+        "education",
+        "entertainment",
+        "transport",
+        "restaurants",
+        "electronics"
+      ]
+    },
+    "observed_mix": [
+      {
+        "segment": "daily_life",
+        "n_users": 205,
+        "share": 0.2562
+      },
+      {
+        "segment": "digital_pro",
+        "n_users": 147,
+        "share": 0.1837
+      },
+      {
+        "segment": "family",
+        "n_users": 162,
+        "share": 0.2025
+      },
+      {
+        "segment": "investor",
+        "n_users": 80,
+        "share": 0.1
+      },
+      {
+        "segment": "student",
+        "n_users": 99,
+        "share": 0.1237
+      },
+      {
+        "segment": "traveler",
+        "n_users": 107,
+        "share": 0.1338
+      }
+    ]
+  },
+  "transaction_model": {
+    "category_avg_amount": {
+      "groceries": 1800.0,
+      "restaurants": 1400.0,
+      "transport": 650.0,
+      "travel": 18000.0,
+      "utilities": 4200.0,
+      "healthcare": 3100.0,
+      "education": 6800.0,
+      "entertainment": 2200.0,
+      "electronics": 15000.0,
+      "fashion": 5200.0,
+      "home": 7300.0,
+      "investments": 13000.0,
+      "insurance": 9600.0,
+      "cash_withdrawal": 4200.0,
+      "money_transfer": 3600.0
+    },
+    "category_sigma": {
+      "groceries": 0.45,
+      "restaurants": 0.5,
+      "transport": 0.4,
+      "travel": 0.75,
+      "utilities": 0.35,
+      "healthcare": 0.55,
+      "education": 0.8,
+      "entertainment": 0.6,
+      "electronics": 0.9,
+      "fashion": 0.85,
+      "home": 0.7,
+      "investments": 1.1,
+      "insurance": 0.65,
+      "cash_withdrawal": 0.5,
+      "money_transfer": 0.6
+    },
+    "summary": {
+      "n_users": 800,
+      "n_transactions": 112626,
+      "avg_transactions_per_user": 140.78,
+      "median_transactions_per_user": 141.0,
+      "date_min": "2025-04-04T06:01:01",
+      "date_max": "2026-04-04T05:52:48",
+      "n_categories_observed": 15
+    },
+    "category_mix": [
+      {
+        "category": "transport",
+        "n_transactions": 10672,
+        "share": 0.0948,
+        "mean_amount": 705.88,
+        "median_amount": 648.34
+      },
+      {
+        "category": "restaurants",
+        "n_transactions": 10584,
+        "share": 0.094,
+        "mean_amount": 1588.23,
+        "median_amount": 1392.63
+      },
+      {
+        "category": "groceries",
+        "n_transactions": 9849,
+        "share": 0.0874,
+        "mean_amount": 1971.47,
+        "median_amount": 1783.32
+      },
+      {
+        "category": "entertainment",
+        "n_transactions": 9789,
+        "share": 0.0869,
+        "mean_amount": 2628.08,
+        "median_amount": 2214.94
+      },
+      {
+        "category": "education",
+        "n_transactions": 9222,
+        "share": 0.0819,
+        "mean_amount": 9342.43,
+        "median_amount": 6717.81
+      },
+      {
+        "category": "investments",
+        "n_transactions": 7771,
+        "share": 0.069,
+        "mean_amount": 24056.79,
+        "median_amount": 13246.84
+      },
+      {
+        "category": "electronics",
+        "n_transactions": 7646,
+        "share": 0.0679,
+        "mean_amount": 22453.83,
+        "median_amount": 15011.88
+      },
+      {
+        "category": "insurance",
+        "n_transactions": 7487,
+        "share": 0.0665,
+        "mean_amount": 11938.32,
+        "median_amount": 9638.8
+      },
+      {
+        "category": "money_transfer",
+        "n_transactions": 7235,
+        "share": 0.0642,
+        "mean_amount": 4305.3,
+        "median_amount": 3611.45
+      },
+      {
+        "category": "utilities",
+        "n_transactions": 6980,
+        "share": 0.062,
+        "mean_amount": 4465.18,
+        "median_amount": 4204.42
+      },
+      {
+        "category": "home",
+        "n_transactions": 6115,
+        "share": 0.0543,
+        "mean_amount": 9414.36,
+        "median_amount": 7341.3
+      },
+      {
+        "category": "healthcare",
+        "n_transactions": 6048,
+        "share": 0.0537,
+        "mean_amount": 3578.88,
+        "median_amount": 3088.58
+      },
+      {
+        "category": "travel",
+        "n_transactions": 5723,
+        "share": 0.0508,
+        "mean_amount": 23600.46,
+        "median_amount": 17714.82
+      },
+      {
+        "category": "fashion",
+        "n_transactions": 3780,
+        "share": 0.0336,
+        "mean_amount": 7550.18,
+        "median_amount": 5141.78
+      },
+      {
+        "category": "cash_withdrawal",
+        "n_transactions": 3725,
+        "share": 0.0331,
+        "mean_amount": 4754.92,
+        "median_amount": 4149.64
+      }
+    ]
+  },
+  "offer_catalog": {
+    "n_offers": 15,
+    "product_type_distribution": {
+      "bundle": 1,
+      "card": 4,
+      "credit": 2,
+      "deposit": 1,
+      "insurance": 2,
+      "investment": 1,
+      "partner": 1,
+      "service": 2,
+      "subscription": 1
+    },
+    "avg_target_categories_per_offer": 3.0
+  },
+  "interaction_model": {
+    "n_interactions": 6442,
+    "positive_rate": 0.202,
+    "avg_impressions_per_user": 8.05,
+    "avg_positive_offers_per_user": 1.63,
+    "holdout_users": 800,
+    "holdout_pairs": 800
+  }
+}
